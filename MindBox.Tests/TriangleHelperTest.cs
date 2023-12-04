@@ -9,6 +9,7 @@ public class TriangleHelperTest
     /// <param name="sideB">Сторона B</param>
     /// <param name="sideC">Сторона C</param>
     [Theory]
+    [InlineData(0, 5, 4)]
     [InlineData(-1, 5, 4)]
     [InlineData(1, -5, 4)]
     [InlineData(1, 5, -4)]

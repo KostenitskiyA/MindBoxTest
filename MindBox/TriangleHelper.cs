@@ -12,10 +12,10 @@ public static class TriangleHelper
     /// <exception cref="InvalidTriangleSidesException">Исключение вызываемое при неправильных значениях сторон треугольника</exception>
     public static TriangleTypes DeterminingTheTypeOfTriangle(double sideA, double sideB, double sideC)
     {
-        if (sideA < 0 ||
-            sideB < 0 ||
-            sideC < 0)
-            throw new InvalidTriangleSidesException("Стороны не могут иметь отрицательное значение");
+        if (sideA <= 0 ||
+            sideB <= 0 ||
+            sideC <= 0)
+            throw new InvalidTriangleSidesException("Стороны не могут иметь отрицательное или нулевое значение");
 
         if (sideA + sideB < sideC ||
             sideA + sideC < sideB ||
